@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+.video 
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -3;
+}
+h1 
+{
+    position: absolute;
+    font-size: 3.6rem;
+    z-index: 1;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.overlay::after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -2;
+    position:absolute;
+}
+.z4 
+{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #20096d;
+    z-index: 4;
+    left: 100px;
+    bottom: 100px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.circle 
+{
+    width:40px ;
+    height: 40px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.circle.translate
+{
+  transform: translateX(48px);
+}
+.z4.active
+{
+    background-color: grey;
+}
+.preloader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0px;
+    z-index: 999;
+    width: 100vw;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+  }
